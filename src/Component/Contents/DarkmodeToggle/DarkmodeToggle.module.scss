@@ -1,0 +1,139 @@
+@import 'global/global.scss';
+
+.DarkmodeToggle {
+    position: fixed;
+    display: flex;
+    bottom: 30px;
+    right: 35px;
+    z-index: $darkmodebutton-index;
+}
+
+.DarkmodeToggle_container {
+    position: relative;
+    display: flex;
+    min-width: 65px !important;
+    height: 30px;
+    padding: 4px;
+    border-radius: 20px;
+    background-color: var(--bg-darkmode);
+    box-shadow: 0 0 9px rgba(0,0,0,0.25);
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0ms, box-shadow 150ms ease-out, background-color 150ms ease-out;
+
+    &>.DarkmodeToggle_button {
+        position: absolute;
+        left: 4px;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background-color: rgb(25, 25, 55);
+        box-shadow: 0 0 6px rgba(0,0,0,0.2);
+        transition: 100ms ease-in-out, background-color 150ms ease-out, width 200ms, height 200ms;
+        &>.modeIcon {
+            width: 30px;
+            height: 30px;
+            &.dark {
+                background: url('/img/darkmode.png') 50% 50% no-repeat;
+                background-size: 15px 15px;
+                filter: invert( 100% );
+                transition: 200ms;
+            }
+            &.light {
+                background: url('/img/lightmode.png') 50% 50% no-repeat;
+                background-size: 15px 15px;
+                transition: 200ms;
+            }
+        }
+    }
+
+    &>.text {
+        position: absolute;
+        left: 0px;
+        font-size: 11px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.7);
+        user-select: none;
+        transition: 100ms ease-in-out;
+        white-space: nowrap;
+    }
+
+    &:hover {
+        background-color: var(--bg-darkmode-hover) !important;
+        box-shadow: 0 0 10px rgba(0,0,0,0.35);
+    }
+
+}
+
+@media (max-width: 1464px) {
+    .DarkmodeToggle {
+        bottom: 25px;
+        right: 25px;
+    }
+    .DarkmodeToggle_container {
+        min-width: 40px !important;
+        width: 40px !important;
+        height: 40px;
+        border-radius: 100%;
+        .text {
+            opacity: 0;
+        }
+        &>.DarkmodeToggle_button {
+            position: absolute;
+            left: 4px;
+            width: 40px;
+            height: 40px;
+            &>.modeIcon {
+                width: 40px;
+                height: 40px;
+                &.dark {
+                    background: url('/img/darkmode.png') 50% 50% no-repeat;
+                    background-size: 20px 20px;
+                    filter: invert( 100% );
+                }
+                &.light {
+                    background: url('/img/lightmode.png') 50% 50% no-repeat;
+                    background-size: 20px 20px;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    .DarkmodeToggle {
+        bottom: 25px;
+        right: 25px;
+    }
+    .DarkmodeToggle_container {
+        min-width: 40px !important;
+        width: 40px !important;
+        height: 40px;
+        border-radius: 100%;
+        .text {
+            opacity: 0;
+        }
+        &>.DarkmodeToggle_button {
+            position: absolute;
+            left: 4px;
+            width: 40px;
+            height: 40px;
+            &>.modeIcon {
+                width: 40px;
+                height: 40px;
+                &.dark {
+                    background: url('/img/darkmode.png') 50% 50% no-repeat;
+                    background-size: 20px 20px;
+                    filter: invert( 100% );
+                }
+                &.light {
+                    background: url('/img/lightmode.png') 50% 50% no-repeat;
+                    background-size: 20px 20px;
+                }
+            }
+        }
+    }
+}
+

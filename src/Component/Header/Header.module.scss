@@ -1,0 +1,185 @@
+@import 'global/global.scss';
+
+.Header {
+    position: absolute;
+    width: 100%;
+    height: $header-height;
+    background: var(--bg-header2);
+    z-index: $header-index;
+    transition: background-color 150ms ease-out;
+    overflow: hidden;
+}
+
+.Header_container {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    height: $header-height;
+    padding: 0 40px;
+    padding-right: 10px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    
+    &>.left {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+        &> a >.logo {
+            line-height: $header-height;
+            padding-right: 30px;
+            font-family: 'Avant Garde';
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-logo);
+            cursor: pointer;
+            user-select: none;
+            transition: color 150ms, margin-left 200ms;
+            &:hover {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    &>.right {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+        .account_container {
+            display: flex;
+            align-items: center;
+            .account {
+                height: 100%;
+                line-height: $header-height;
+                margin-left: 14px;
+                font-size: 0.85rem;
+                transition: color 150ms;
+            }
+            .profileImg {
+                width: 30px;
+                height: 30px;
+                margin-top: 0px;
+                background: var(--img-pf);
+                background-size: 24px 24px;
+                background-position: 40% 100%;
+                background-color: rgb(74, 74, 100);
+                filter: var(--img-pf-filter);
+                border: 1.5px solid rgb(74, 74, 100);
+                border-radius: 100%;
+                box-shadow: 0 0 13px rgba(0,0,0,1);
+                box-sizing: border-box;
+                transition: filter 150ms ease-out;
+        }
+        }
+        hr{
+            width: 1.8px;
+            height: 35px;
+            margin-right: 35px;
+            margin-left: 20px;
+            border: none;
+            background-color: var(--bg-sidebar-hr);
+            filter: brightness(90%);
+            transition: background-color 150ms;
+        }
+        ul{
+            display: flex;
+            height: 100%;;
+            color: var(--text-normal);
+            transition: 150ms;
+            li{
+                position: relative;
+                height: 100%;
+                line-height: $header-height;
+                padding: 0 15px;
+                margin: 0 5px;
+                font-size: 0.85rem;
+                font-weight: 500;
+                white-space: nowrap;
+                overflow: hidden;
+                cursor: pointer;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 0%;
+                    height: 70%;
+                    left: 50%;
+                    top: 50%;
+                    background-color: var(--bg-header-menu-hover);
+                    opacity: 0;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+                    transition: 150ms;
+                }
+                &:hover{
+                    &::before {
+                        width: 100%;
+                        opacity: 1;
+                        
+                    }
+                }
+                &.active {
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 90%;
+                        height: 3px;
+                        left: 50%;
+                        top: 85%;
+                        opacity: 1;
+                        transform: translate(-50%, auto);
+                        z-index: -1;
+                        transition: 150ms;
+                        background-color: var(--bg-header-menu-active);
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+@include mobile {
+    /*브라우저 사이즈767px이하일때*/
+    .Header_container {
+        padding-right: 00px !important;
+        &>.right {
+            .account {
+                display: none;
+            }
+            &>hr {
+                display: none;
+            }
+            &>ul {
+                margin-right: 5px;
+                & li{
+                    padding: 0 10px;
+                    font-size: 0.7rem !important;
+                    &.active {
+                        &::before {
+                            height: 1.5px;
+                            top: 81%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .Header_container {
+        padding-right: 10px;
+        padding-left: 10px;
+        &>.left {
+            a {
+                display: none;
+            }
+        }
+        &>.right {
+            margin-right: 0px;
+        }   
+    }
+    .Header {
+        position: absolute !important;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.25) !important;
+    }
+}

@@ -1,0 +1,10 @@
+@import 'global/global.scss';
+
+.Contents {
+    display: flex;
+    width: 100%;
+    min-height: 1500px;
+    background-color: var(--bg-body);
+    text-align: center;
+    transition: background-color 150ms ease-out;
+}

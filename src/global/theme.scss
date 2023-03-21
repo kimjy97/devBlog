@@ -1,0 +1,178 @@
+html[data-theme="light"] {
+    //## Layout ##//
+
+    // Background //
+    --bg-footer: rgb(240, 240, 240);
+    --bg-body: rgb(255, 255, 255);
+    --bg-header1: rgba(255, 255, 255, 0.8);
+    --bg-header2: rgba(255, 255, 255, 0);
+    --bg-header-menu-hover: rgba(0, 0, 0, 0.08);
+    --bg-header-menu-active: rgba(0, 0, 0, 0.2);
+    --bg-sidebar: rgb(255, 255, 255);
+    --bg-sidebar-shadow: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.15) 100%);
+    --bg-sidebar-boxshadow: 2px 0 20px rgba(0, 0, 0, 0.15);
+    --bg-sidebar-hr: rgb(220, 220, 220);
+    --bg-sidebar-menu-hover: rgb(238, 238, 241);
+    --bg-sidebar-effect1: rgba(0, 0, 0, 0.05);
+    --bg-sidebar-input: rgb(235, 235, 235);
+    --bg-sidebar-input-focus: rgb(220, 220, 220);
+    --bg-tag: rgba(50, 50, 50, 0.15);
+    --bg-tag-hover: rgba(50, 50, 50, 0.22);
+    --bg-tag-active: rgba(50, 50, 50, 0.3);
+    --bg-pitem: rgb(255, 255, 255);
+    --bg-pitem-cover: rgba(255, 255, 255, 0);
+    --bg-pitem-hover: rgba(240, 240, 240);
+    --bg-pitem-border: 1px solid rgb(230, 230, 230);
+    --bg-pitem-border-all: 1px solid rgba(230, 230, 230, 1);
+    --bg-thumbnail: rgb(225, 225, 225);
+    --bg-thumbnail-border: rgb(220, 220, 220);
+    --bg-post-nav: rgb(235, 235, 235);
+    --bg-post-nav-hover: rgb(228, 228, 228);
+    --bg-submenu: rgb(235, 235, 235);
+    --bg-submenu-hover: rgb(210, 210, 210);
+    --bg-submenu-active: rgb(195, 195, 195);
+    --bg-submenu-tooltip: rgb(220, 80, 80);
+    --bg-submenu2: rgb(255, 255, 255);
+    --bg-submenu2-hover: rgb(240, 240, 240);
+    --bg-submenu2-active: rgb(230, 230, 230);
+    --bg-comment-input: rgba(245, 245, 245, 1);
+    --bg-comment-input-border: rgba(220, 220, 220, 1);
+    --bg-comment-input-focus: rgba(255, 255, 255, 1);
+    --bg-comment-input-border-focus: rgba(180, 180, 180, 1);
+    --bg-comment-button: rgb(130, 130, 130);
+    --bg-comment-button-hover: rgb(110, 110, 110);
+    --bg-comment: rgb(240, 240, 240);
+    --bg-comment-border: rgb(210, 210, 210);
+    --bg-darkmode: rgba(255, 255, 255, 1);
+    --bg-darkmode-hover: rgba(250, 250, 250, 1);
+    --bg-like-border: rgba(0, 0, 0, 0.25);
+    --bg-like-shadow: rgba(0,0,0,0.2);
+    // Text //
+    --text-normal: black;
+    --text-sub: rgb(80, 80, 80);
+    --text-abstract: rgb(50, 50, 200);
+    --text-logo: rgb(70, 40, 130);
+    --text-tag: rgb(70, 70, 70);
+    --text-tag-hover: rgb(0, 0, 0);
+    --text-pitem-shadow: 0px 0px 7px rgba(0, 0, 0, 1);
+    --text-pitem-tagname: rgb(50, 50, 255);
+    --text-comment: rgb(100, 100, 255);
+    // Scrollbar //
+    --bg-sb: rgba(50, 40, 50, 0.3);
+    --bg-sb-hover: rgba(50, 40, 50, 0.4);
+    // Select //
+    --bg-select: rgb(202, 202, 230);
+    --text-select: rgb(0, 0, 0);
+
+    //## Other ##//
+
+    // Image //
+    --img-pf: url('/img/accountDefault.png') no-repeat;
+    --img-pf-filter: invert(20%) brightness(360%);
+    --img-pf-bg: url('/img/profile_background_4.jpg') no-repeat;
+    --img-pf-bg-filter: brightness(115%);
+    --img-pf-bg-position: -50px 0;
+    --img-pf-bg-light-opacity: 1;
+    --img-pf-bg-dark-opacity: 0;
+    --img-sidebar-icon-filter: invert(70%);
+    --img-sidebar-icon-filter-hover: invert(100%);
+    --img-pin-invert: invert(50%);
+    --img-pitem-icon: invert(70%);
+    --img-listmode-filter: invert(55%);
+    --img-listmode-active-filter: invert(0%);
+    --img-submenu-filter: invert(50%);
+    --img-submenu-filter-hover: invert(0%);
+    --img-replyicon-filter: brightness(75%);
+    --img-burger-filter: invert(0%);
+}
+
+html[data-theme="dark"] {
+    //## Layout ##//
+
+    // Background //
+    --bg-toast-success: rgb(55, 55, 55);
+    --bg-toast-error: rgb(120, 0, 0);
+    --bg-footer: rgb(19, 21, 25);
+    --bg-body: rgb(24, 27, 31);
+    --bg-header1: rgba(29, 33, 35, 0.8);
+    --bg-header2: rgba(0,0,0,0); /*rgba(0, 0, 0, 0);*/
+    --bg-header-menu-hover: rgba(180, 180, 255, 0.05);
+    --bg-header-menu-active: rgba(180, 180, 255, 0.15);
+    --bg-sidebar: rgb(29, 31, 37);
+    --bg-sidebar-shadow: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.45) 100%);
+    --bg-sidebar-boxshadow: 2px 0 20px rgba(0, 0, 0, 0.2);
+    --bg-sidebar-hr: rgb(60, 60, 60);
+    --bg-sidebar-menu-hover: rgb(42, 44, 54);
+    --bg-sidebar-effect1: rgba(255, 255, 255, 0.07);
+    --bg-sidebar-input: rgb(48, 48, 55);
+    --bg-sidebar-input-focus: rgb(54, 54, 63);
+    --bg-tag: rgba(100, 100, 170, 0.3);
+    --bg-tag-hover: rgba(150, 150, 255, 0.3);
+    --bg-tag-active: rgba(100, 100, 170, 0.7);
+    --bg-pitem: rgba(48, 52, 62, 0.5);
+    --bg-pitem-cover: rgba(0, 0, 0, 0.25);
+    --bg-pitem-hover: rgba(57, 57, 70, 0.7);
+    --bg-pitem-border: 1px solid rgb(48, 52, 60);
+    --bg-pitem-border-all: 1px solid rgba(30, 30, 30, 0);
+    --bg-thumbnail: rgb(18, 18, 18);
+    --bg-thumbnail-border: rgb(35, 35, 44);
+    --bg-post-nav: rgb(37, 39, 46);
+    --bg-post-nav-hover: rgb(48, 48, 59);
+    --bg-submenu: rgb(40, 40, 48);
+    --bg-submenu-hover: rgb(48, 48, 59);
+    --bg-submenu-active: rgb(70, 70, 95);
+    --bg-submenu-tooltip: rgb(120, 50, 50);
+    --bg-submenu2: rgb(40, 40, 48);
+    --bg-submenu2-hover: rgb(48, 48, 59);
+    --bg-submenu2-active: rgb(70, 70, 95);
+    --bg-comment-input: rgba(200, 200, 255, 0.05);
+    --bg-comment-input-border: rgba(30, 30, 30, 1);
+    --bg-comment-input-focus: rgba(200, 200, 255, 0.09);
+    --bg-comment-input-border-focus: rgba(30, 30, 30, 1);
+    --bg-comment-button: rgb(64, 64, 115);
+    --bg-comment-button-hover: rgb(75, 75, 126);
+    --bg-comment: rgb(31, 34, 40);
+    --bg-comment-border: rgb(50, 50, 55);
+    --bg-darkmode: rgba(50, 50, 58, 1);
+    --bg-darkmode-hover: rgba(57, 57, 66, 1);
+    --bg-like-border: rgba(255, 255, 255, 0.2);
+    --bg-like-shadow: rgba(255,255,255,0.2);
+    // Text //
+    --text-normal: white;
+    --text-sub: rgb(160, 160, 160);
+    --text-abstract: rgb(210, 208, 255);
+    --text-logo: rgb(160, 160, 255);
+    --text-tag: rgb(210, 210, 210);
+    --text-tag-hover: rgb(245, 245, 245);
+    --text-pitem-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    --text-pitem-tagname: rgb(255, 255, 180);
+    --text-comment: rgb(200, 200, 255);
+    // Scrollbar //
+    --bg-sb: rgba(0, 230, 255, 0.14);
+    --bg-sb-hover: rgba(0, 230, 255, 0.19);
+    // Select //
+    --bg-select: rgb(64, 64, 115);
+    --text-select: rgb(255, 255, 255);
+    
+    //## Other ##//
+
+    // Image //
+    --img-pf: url('/img/accountDefault.png') no-repeat;
+    --img-pf-filter: invert(10%);
+    --img-pf-bg: url('/img/profile_background_1.jpg') no-repeat;
+    --img-pf-bg-filter: brightness(70%);
+    --img-pf-bg-position: -50px 0;
+    --img-pf-bg-light-opacity: 0;
+    --img-pf-bg-dark-opacity: 1;
+    --img-sidebar-icon-filter: invert(25%);
+    --img-sidebar-icon-filter-hover: invert(0%);
+    --img-pin-invert: invert(0%) ;
+    --img-pitem-icon: invert(80%);
+    --img-listmode-filter: invert(65%);
+    --img-listmode-active-filter: invert(100%);
+    --img-submenu-filter: invert(60%);
+    --img-submenu-filter-hover: invert(100%);
+    --img-replyicon-filter: brightness(40%);
+    --img-burger-filter: invert(100%);
+
+}

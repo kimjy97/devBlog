@@ -1,0 +1,66 @@
+@import 'global/global.scss';
+
+$changemodeComponentWidth: 40px;
+$changemodeComponentHeight: 40px;
+
+.ChangePostListMode {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-bottom: 32px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.ChangePostListMode_container {
+    position: relative;
+    display: flex;
+    width: 110px;
+    height: $changemodeComponentHeight;
+    background-color: var(--bg-tag);
+    justify-content: space-between;
+    transition: 150ms ease-out;
+
+    &> .mode {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        line-height: $changemodeComponentHeight;
+        background-color: rgba(0, 0, 0, 0);
+        cursor: pointer;
+        transition: 150ms ease-out !important;
+    }
+    &> .mode1 {
+        margin: 5px;
+        margin-right: 0px;
+        background: url('/img/listStyle_1.png') 50% 50% no-repeat;
+        background-size: 18px 18px;
+        filter: var(--img-listmode-filter);
+        transition: 150ms ease-out;
+    }
+    &> .mode2 {
+        margin: 5px;
+        background: url('/img/listStyle_2.png') 50% 50% no-repeat;
+        background-size: 18px 18px;
+        filter: var(--img-listmode-filter);
+        transition: 150ms ease-out;
+    }
+    &> .mode3 {
+        margin: 5px;
+        margin-left: 0px;
+        background: url('/img/listStyle_3.png') 50% 50% no-repeat;
+        background-size: 18px 18px;
+        filter: var(--img-listmode-filter);
+        transition: 150ms ease-out;
+    }
+}
+
+.modeEffect {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left : 0px;
+    line-height: $changemodeComponentHeight;
+    margin: 5px;
+    background-color: var(--bg-tag-active);
+    transition: 120ms ease-out;
+}

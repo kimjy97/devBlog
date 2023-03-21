@@ -1,0 +1,50 @@
+.TagList {
+    display: flex;
+    max-width: 80%;
+    max-height: 90px;
+    margin-bottom: 20px;
+    text-align: left;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    flex-wrap: wrap;
+
+    li {
+        scroll-snap-align: start;
+        margin-right: 17px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        user-select: none;
+        transition: 150ms;
+
+        p {
+            display: inline-block;
+            border-radius: 0px;
+            padding: 6px 12px;
+            margin-bottom: 15px;
+            color: var(--text-tag);
+            background-color: var(--bg-tag);
+            transition: 200ms;
+            white-space: nowrap;
+            cursor: pointer;
+
+            &>span {
+                margin-left: 10px;
+                opacity: 0.6;
+                user-select: none;
+            }
+
+            &:hover {
+                color: var(--text-tag-hover);
+                background-color: var(--bg-tag-hover);
+            }
+        }
+    }
+}
+
+.active {
+    color: var(--text-normal) !important;
+    background-color: var(--bg-tag-active) !important;
+    box-sizing: border-box;
+}

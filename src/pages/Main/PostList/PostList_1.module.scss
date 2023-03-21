@@ -1,0 +1,90 @@
+@import 'global/global.scss';
+
+.PostList {
+    position: relative;
+    width: 100%;
+    border: var(--bg-pitem-border-all);
+    box-sizing: border-box;
+
+    .list {
+        display: flex;
+        padding: 12px 15px;
+        margin: 0px 0;
+        font-size: 0.85rem;
+        font-weight: 500;
+        text-align: left;
+        border-top: var(--bg-pitem-border);
+        background-color: var(--bg-pitem);
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.15);
+        justify-content: space-between;
+        cursor: pointer;
+        box-sizing: border-box;
+        transition: background-color 150ms, border 150ms;
+
+        .flexBox {
+            display: flex;
+
+            &:first-child {
+                min-width: 0;
+            }
+        }
+
+        .mainTag {
+            color: var(--text-pitem-tagname);
+            margin-right: 8px;
+            transition: color 150ms;
+            white-space: nowrap;
+        }
+
+        .postTitle {
+            display: -webkit-box;
+            height: 1.2rem;
+            padding-right: 10px;
+            color: var(--text-normal);
+            overflow: hidden;
+            word-wrap: break-word;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            transition: color 150ms;
+        }
+
+        .postDate {
+            color: var(--text-sub);
+            font-size: 0.7rem;
+            line-height: 19.2px;
+            white-space: nowrap;
+            transition: color 150ms;
+        }
+
+        &:hover {
+            background-color: var(--bg-pitem-hover);
+        }
+    }
+}
+
+.noPostScreen {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+
+    div {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            margin-left: 20px;
+            font-size: 1.1rem;
+        }
+    }
+
+}
+
+.warning {
+    width: 40px;
+    height: 40px;
+    background: url('/img/warning.png') 50% 50% no-repeat;
+    background-size: 35px 35px;
+}

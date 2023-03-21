@@ -1,0 +1,107 @@
+@import 'global/global.scss';
+
+.Main {
+    padding-top: $header-height;
+    padding-bottom: 400px;
+    flex: 1;
+}
+.Main_container {
+    width: 100%;
+    max-width: $contents-maxWidth;
+    min-height: 1000px;
+    margin: 0 auto;
+    padding: 0 25px;
+    padding-top: 100px;
+    box-sizing: border-box;
+
+    & > .title {
+        margin-bottom: 100px;
+        font-family: 'Avant Garde', 'SUIT Variable';
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: var(--text-normal);
+        transition: color 150ms;
+    }
+    & > .boardName {
+        display: flex;
+        height: 35px;
+        line-height: 35px;
+        margin-left: 0px;
+        margin-bottom: 15px;
+        align-items: center;
+        text-align: left;
+        font-family: '맑은 고딕';
+        font-weight: 500;
+        font-size: 0.85rem;
+        animation: boardAni 300ms ease;
+
+        transition: color 150ms;
+        
+        &>.pinIcon {
+            width: 30px;
+            height: 30px;
+            margin-right: 2px;
+            background: url('/img/pin.png') 50% 50% no-repeat;
+            background-size: 20px 20px;
+            opacity: 0.6;
+            filter: var(--img-pin-invert);
+            transition: filter 150ms;
+        }
+        &>.arrow {
+            
+            animation: tagAni 300ms ease;
+            span {
+                font-family: 'SUIT Variable';
+                margin: 0 5px;
+                margin-left: 10px;
+                font-weight: 700;
+                filter: invert(60%);
+            }
+        }
+    }
+
+    & > .controller_container {
+        display: flex;
+    }
+}
+
+@keyframes boardAni {
+    0% {
+      opacity: 0;
+      margin-left: 10px;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0px;
+    }
+}
+
+@keyframes tagAni {
+    0% {
+      color: rgba(0,0,0,0);
+      margin-left: -10px;
+    }
+    100% {
+      color: var(--text-normal);
+      margin-left: 0px;
+    }
+}
+
+@include mobile {
+    /*브라우저 사이즈767px이하일때*/
+    .Main_container {
+        padding: 0 10px;
+        padding-top: 100px;
+        .title {
+            font-size: 1.7rem;
+        }
+    }
+}
+
+@include tablet {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    .Main_container {
+        padding: 0 20px;
+        padding-top: 100px;
+    }
+}

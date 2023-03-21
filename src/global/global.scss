@@ -1,0 +1,27 @@
+// Size //
+$header-height: 65px;
+$sidebar1-width: 350px;
+$sidebar2-width: 300px;
+$sidebar3-width: 400px;
+$contents-maxWidth: 1100px;
+$post-maxWidth: 950px;
+
+// z-index //
+$darkmodebutton-index: 1002;
+$footer-index: 1001;
+$header-index: 1000;
+$sidebar-index: 999;
+$submenu-index: 998;
+
+// mixin //
+@mixin mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}

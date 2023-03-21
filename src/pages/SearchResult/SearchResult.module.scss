@@ -1,0 +1,54 @@
+@import 'global/global.scss';
+
+.SearchResult {
+    padding-top: $header-height;
+    padding-bottom: 400px;
+    flex: 1;
+    overflow-x: hidden;
+}
+
+.SearchResult_container {
+    width: 100%;
+    max-width: $contents-maxWidth;
+    min-height: 1000px;
+    margin: 0 auto;
+    padding: 0 25px;
+    padding-top: 100px !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+    & > .controller_container {
+        display: flex;
+    }
+    
+    & > .title {
+        margin-bottom: 40px;
+        font-family: 'Avant Garde', 'SUIT Variable', '맑은 고딕';
+        font-size: 2.1rem;
+        font-weight: 700;
+        color: rgb(137, 124, 255);
+        
+        transition: color 150ms;
+    }
+    & > .subtitle {
+        margin-bottom: 110px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--text-normal);
+    }
+}
+
+
+@include mobile {
+    /*브라우저 사이즈767px이하일때*/
+    .SearchResult_container {
+        padding: 0 10px;
+    }
+}
+
+@include tablet {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    .SearchResult_container {
+        padding: 0 20px;
+    }
+}
